@@ -32,3 +32,5 @@ public class LongestSAWithSumBHavingWhole {
         System.out.println(len);
     }
 }
+//TC -> O(N)
+//SC -> O(1)
