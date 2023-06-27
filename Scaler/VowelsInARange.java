@@ -25,16 +25,17 @@ public class VowelsInARange {
                 psv[i] = psv[i-1];
             }
         }
-        int index = 0;
         for(int i=0;i<q;i++){
             int l = b[i][0];
             int r = b[i][1];
             if(l == 0){
-                result[index++] = psv[r];
+                result[i] = psv[r];
             }else{
-                result[index++] = psv[r] - psv[l-1];
+                result[i] = psv[r] - psv[l-1];
             }
         }
         System.out.println(Arrays.toString(result));
     }
 }
+//TC -> O(N + Q)
+//SC -> O(N)
