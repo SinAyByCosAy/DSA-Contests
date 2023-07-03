@@ -16,9 +16,10 @@ public class LongestSAWithSumBHavingWhole {
         System.out.println("Enter sum");
         int k = sc.nextInt();
         int l = 0, r = 0, len = 0;
-        long sum = a[0];
+        long sum = 0;
         while(r < n){
-            while(l<=r && sum > k){
+            sum += a[r];
+            while(sum > k){
                 sum -= a[l];
                 l++;
             }
@@ -26,8 +27,6 @@ public class LongestSAWithSumBHavingWhole {
                 len = Math.max(len, r-l+1);
             }
             r++;
-            if(r<n)
-                sum += a[r];
         }
         System.out.println(len);
     }
